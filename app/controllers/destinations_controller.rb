@@ -29,9 +29,6 @@ class DestinationsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
     @destination.assign_attributes(destination_params)
 

@@ -21,9 +21,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
     @product.assign_attributes(product_params)
 
@@ -34,9 +31,6 @@ class ProductsController < ApplicationController
     else
       render action: :edit, status: :unprocessable_entity
     end
-  end
-
-  def show
   end
 
   def destroy
