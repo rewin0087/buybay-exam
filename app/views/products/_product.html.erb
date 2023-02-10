@@ -1,0 +1,17 @@
+<tr>
+  <td><%= product.id %></td>
+  <td><%= product.name %></td>
+  <td><%= product.price %></td>
+  <td><%= product.category %></td>
+  <td><%= product.reference %></td>
+  <td><%= product.destination&.name %></td>
+  <% unless @hide_action %>
+  <td>
+    <div class="btn-group" role="group" aria-label="Actions">
+      <%= link_to 'View', product_path(product), class: 'btn btn-outline-info' %>
+      <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-outline-info' %>
+      <%= link_to 'Delete', product_path(product), class: 'btn btn-outline-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    </div>
+  </td>
+  <% end %>
+</tr>

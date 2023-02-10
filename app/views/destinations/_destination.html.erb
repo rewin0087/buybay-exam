@@ -1,0 +1,14 @@
+<tr>
+  <td><%= destination.id %></td>
+  <td><%= destination.name %></td>
+  <td><%= destination.maximum_price %></td>
+  <td><%= destination.categories.join(' ') %></td>
+  <td><%= destination.references.join(' ') %></td>
+  <td>
+    <div class="btn-group" role="group" aria-label="Actions">
+      <%= link_to 'View', destination_path(destination), class: 'btn btn-outline-info' %>
+      <%= link_to 'Edit', edit_destination_path(destination), class: 'btn btn-outline-info' %>
+      <%= link_to 'Delete', destination_path(destination), class: 'btn btn-outline-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    </div>
+  </td>
+</tr>

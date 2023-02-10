@@ -1,0 +1,7 @@
+<%= simple_form_for @destination do |f| %>
+    <%= f.input :name %>
+    <%= f.input :maximum_price %>
+    <%= f.input :references, collection: @product_references, input_html: { multiple: true }, include_blank: true  %>
+    <%= f.input :categories, collection: @product_categories, input_html: { multiple: true }, include_blank: true  %>
+  <%= f.submit 'Save', class: 'btn btn-outline-success btn-block' %>
+<% end %>

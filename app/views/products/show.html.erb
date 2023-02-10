@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <span>Product Details</span>
+        <div class="btn-group" role="group" aria-label="Actions">
+          <%= link_to 'Product List', products_path, class: 'btn btn-outline-info' %>
+          <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-outline-info' %>
+          <%= link_to 'Delete', product_path(@product), class: 'btn btn-outline-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col col-md-1">ID:</div>
+          <div class="col"><%= @product.id %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Name:</div>
+          <div class="col"><%= @product.name %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Price:</div>
+          <div class="col"><%= @product.price %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Reference:</div>
+          <div class="col"><%= @product.reference %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Category:</div>
+          <div class="col"><%= @product.category %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Destination:</div>
+          <div class="col"><%= @product.destination&.name %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

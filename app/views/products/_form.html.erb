@@ -1,0 +1,14 @@
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :reference %>
+  <%= f.input :category %>
+  <div class="row">
+    <div class="col d-grid">
+      <%= link_to 'Cancel', products_path, class: 'btn btn-outline-info btn-block' %>
+    </div>
+    <div class="col d-grid">
+      <%= f.submit 'Save', class: 'btn btn-outline-success btn-block' %>
+    </div>
+  </div>
+<% end %>

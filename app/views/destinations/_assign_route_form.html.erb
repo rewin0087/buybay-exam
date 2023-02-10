@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <span>Assign Route</span>
+        <%= link_to 'New Destination', new_destination_path, class: 'btn btn-outline-info btn-sm' %>
+      </div>
+      <div class="card-body">
+        <%= form_tag(assign_route_destinations_path, method: :post) do %>
+          <div class="row">
+            <div class="col">
+              <%= select_tag 'product_id', options_from_collection_for_select(@unrouted_products, 'id', 'name'), prompt: 'Select product', class: 'form-control' %>
+            </div>
+            <div class="col">
+              <%= submit_tag "Assign route", data: { disable_with: "Assigning..." }, class: 'btn btn-outline-info' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<%= render 'assign_route_form' %>
+
+<div class="row mt-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <span>Routed Products</span>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped table-hover">
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Reference</th>
+            <th>Destination</th>
+          </thead>
+          <tbody>
+            <%= render @routed_products %>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer d-flex justify-content-center pt-3">
+        <%= paginate @routed_products %>
+      </div>
+    </div>
+  </div>
+</div>

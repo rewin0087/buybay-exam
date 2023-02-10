@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <span>Destination Details</span>
+        <div class="btn-group" role="group" aria-label="Actions">
+          <%= link_to 'Destinations List', destinations_path, class: 'btn btn-outline-info' %>
+          <%= link_to 'Edit', edit_destination_path(@destination), class: 'btn btn-outline-info' %>
+          <%= link_to 'Delete', destination_path(@destination), class: 'btn btn-outline-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col col-md-1">ID:</div>
+          <div class="col"><%= @destination.id %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Name:</div>
+          <div class="col"><%= @destination.name %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Maximum Price:</div>
+          <div class="col"><%= @destination.maximum_price %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Reference:</div>
+          <div class="col"><%= @destination.references.join(' ') %></div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-1">Category:</div>
+          <div class="col"><%= @destination.categories.join(' ') %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
