@@ -26,3 +26,10 @@
 ## Test
 
 - Run `bundle exec rspec spec`
+
+## Usage
+
+- Once `rails server` is up and running and app was loaded on the browser, you can navigate to home page where in you can assign a product for route destination by picking which product to route and hit assign route, this will automatically evaluate based from criteria for those destinations defined in the app and it will automatically assign the product to the correct route which will display on the Routed products table.
+- You can manage products as well under `Products` menu you can.
+- You can manage destinations as well under `Destinations` menu.
+- To assign and view routed products this will be displayed on the home page, you can only assign route for those products that wasnt assigned only.
