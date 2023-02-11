@@ -16,10 +16,10 @@ class RouteProduct
       run_reference_query
       run_category_query
       run_max_price_query
-      sort_result
+      sort_result_query
     end
 
-    def sort_result
+    def sort_result_query
       query.sort_by {|d| [d.categories.count, d.references.count] }
            .reverse
            .first
